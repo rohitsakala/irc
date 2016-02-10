@@ -1,0 +1,16 @@
+{
+	"name": "rohitsakalairc",
+	"version": "1.0",
+	"description": "A simple irc bot using nodejs",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"dependencies": {
+		"irc": "0.4.1",
+	},
+	"engines": {
+	        "node": "0.12.7"
+	},
+	"license": "MIT"
+}
