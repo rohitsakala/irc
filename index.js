@@ -11,12 +11,12 @@ var bot = new irc.Client(config.server, config.botName, {
 
 // Listen for any message, PM said user when he posts
 bot.addListener("message", function(from, to, text, message) {
-			console.log(from + "¿Que?");
+			console.log(message);
 			});
 
 // Listen for any message, say to him/her in the room
 bot.addListener("message", function(from, to, text, message) {
-			console.log(config.channels[0] + "¿Public que?");
+			console.log(message);
 			});
 
 
