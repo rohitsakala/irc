@@ -1,16 +1,18 @@
 {
-	"name": "rohitsakalairc",
-	"version": "1.0",
-	"description": "A simple irc bot using nodejs",
-	"main": "index.js",
-	"scripts": {
-		"start": "node index.js"
-	},
-	"dependencies": {
-		"irc": "0.4.1"
-	},
-	"engines": {
-	        "node": "0.12.7"
-	},
-	"license": "MIT"
+  "name": "irctest",
+  "version": "0.0.1",
+  "description": "notjhign",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rohitsakala/irc.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/rohitsakala/irc/issues"
+  }
 }
