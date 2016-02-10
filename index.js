@@ -1,26 +1,23 @@
-var config = {
+var irc = require("irc");
+
+var config = { 
 	channels: ["#opendaylight", "#mootools"],
 	server: "irc.freenode.net",
 	botName: "rohitsakalabot"
 };
 
-var irc = require("irc");
-var util = require('util');
+var http = require('http');
+http.createServer(function (req, res) {
 
-var bot = new irc.Client(config.server, config.botName, {
-			channels: config.channels
-});
+		var bot = new irc.Client(config.server, config.botName, {
+			                        channels: config.channels
+			});
 
-// Listen for any message, PM said user when he posts
-bot.addListener("message", function(from, to, text, message) {
-			console.log(util.inspect(message, false, null));
-});
-
-// Listen for any message, say to him/her in the room
-bot.addListener("message", function(from, to, text, message) {
-			console.log(util.inspect(message, false, null));
-});
-
-
-
-
+		  bot.addListener("message#", function(nick, to, text, message) {
+			      console.log(nick, " :=> ", text);
+			          res.writeHead(200, {'Content-Type': 'text/plain'});
+				      res.write(text);
+				          res.end(text);
+					  });
+		  }).listen(1337, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:1337/');
