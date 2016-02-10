@@ -1,15 +1,27 @@
-var irc = require("irc");
+var http = require('http');
+var irc = require('irc');
 
-var config = { 
-	channels: ["#opendaylight", "#mootools"],
-	server: "irc.freenode.net",
-	botName: "rohitsakalabot"
-};
-
-var bot = new irc.Client(config.server, config.botName, {
-                        channels: config.channels
+var client = new irc.Client('irc.freenode.net', 'rohitsakalabot', {
+		  autoConnect: false
+		  });
+client.connect(5, function(input) {
+	console.log("Connected!");
+	client.join('#opendaylight', function(input) {
+		console.log("Joined #clojure");
+		client.say('#opendaylight', "Hi");
+	});
 });
 
-bot.addListener("message#", function(nick, to, text, message) {
-		console.log(nick);
+client.addListener('pm', function (from, text) {
+	console.log("[PM] - " + from + ': ' + text);
+	client.say(from, text);
+	if(text.indexOf('die') !== -1) {
+			client.disconnect("Goodbye, cruel world!", function() {
+			console.log("YOLO");
+		});
+	}
+});
+
+client.addListener('message', function (from, to, text) {
+		  console.log(from + ' => ' + to + ': ' + text);
 });
