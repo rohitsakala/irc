@@ -11,5 +11,5 @@ var bot = new irc.Client(config.server, config.botName, {
 });
 
 bot.addListener("message#", function(nick, to, text, message) {
-		console.log(nick, " :=> ", text);
+		console.log(nick);
 });
