@@ -3,7 +3,6 @@ var irc = require('irc');
 var port = process.env.PORT || 5000;
 var server = http.createServer();
 server.listen(port);
-
 var config = {
     realName: 'Sakala Venkata Krishna Rohit',
     port: 6667,
