@@ -26,6 +26,7 @@ var config = {
     encoding: ''
 }
 
+
 var client = new irc.Client('irc.freenode.net', 'rohitsakala', config);
 
 client.connect(5, function(input) {
