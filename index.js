@@ -37,24 +37,24 @@ client.connect(5, function(input) {
 
 // Listener to be notified when a person joins the channel
 
-client.addListener('message', function (channel, nick, message) {
-	if(nick == "Nithiya")
-	{
-		console.log(channel + '=>' + nick + "has joined IRC");
-	}
-});
+//client.addListener('message', function (channel, nick, message) {
+//	if(nick == "Nithiya")
+//	{
+//		console.log(channel + '=>' + nick + "has joined IRC");
+//	}
+//});
 
 // Listener to get messages in the channel
 
-client.addListener('message', function (from, to, text) {
-		  console.log(from + ' => ' + to + ': ' + text);
-});
+//client.addListener('message', function (from, to, text) {
+//		  console.log(from + ' => ' + to + ': ' + text);
+//});
 
 // Listener to get messages in the channel only of PM
 
-client.addListener('pm', function (from, text) {
-	console.log("[PM] - " + from + ': ' + text);
-	client.say(from, "Leave your message, I will reply when I see the notification on my mobile.");
-});
+//client.addListener('pm', function (from, text) {
+//	console.log("[PM] - " + from + ': ' + text);
+//	client.say(from, "Leave your message, I will reply when I see the notification on my mobile.");
+//});
 
 
