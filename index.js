@@ -26,7 +26,8 @@ var config = {
 }
 
 
-var client = new irc.Client('irc.freenode.net', 'rohitsakala', config);
+var client = new irc.Client('irc.freenode.net', 'rohitsakala');
+client.say("nickserv","identity radhaadolf");
 
 client.connect(5, function(input) {
 	console.log("Connected!");
