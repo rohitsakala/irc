@@ -41,7 +41,7 @@ client.connect(5, function(data) {
         }
         else
         {
-            console.log(util.inspect(data,false,null));
+            console.log("no" + util.inspect(data,false,null));
         }
     });
 
