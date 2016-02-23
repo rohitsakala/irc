@@ -62,22 +62,3 @@ client.addListener('pm', function (nick, text, message) {
     client.say(nick,"Bot :- Logged and sent to Rohit's Personal Mobile.");
 });
 
-//  if(nick == "Nithiya")
-//  {
-//      console.log(channel + '=>' + nick + "has joined IRC");
-//  }
-//});
-
-// Listener to get messages in the channel
-
-//client.addListener('message', function (from, to, text) {
-//        console.log(from + ' => ' + to + ': ' + text);
-//});
-
-// Listener to get messages in the channel only of PM
-
-//client.addListener('pm', function (from, text) {
-//  console.log("[PM] - " + from + ': ' + text);
-//  client.say(from, "Leave your message, I will reply when I see the notification on my mobile.");
-//});
-=======
