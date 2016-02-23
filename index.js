@@ -58,9 +58,10 @@ client.connect(5, function(data) {
 
 });
 
-// Listener to be notified when a person joins the channel
+client.addListener('pm', function (nick, text, message) {
+    console.log(nick + text + message);
+});
 
-//client.addListener('message', function (channel, nick, message) {
 //  if(nick == "Nithiya")
 //  {
 //      console.log(channel + '=>' + nick + "has joined IRC");
