@@ -33,15 +33,18 @@ var client = new irc.Client('irc.freenode.net', 'rohitsakala', config);
 
 client.connect(5, function(data) {
     console.log("Connected  to " + data['server'] );
-    try {
-    client.join('#opendaylight',function(data) {
-        console.log(util.inspect(data,false,null));
+    
+    client.join('#opendaylight',function(err,data) {
+        if(err)
+        {
+            console.error("An error occured",err);
+        }
+        else
+        {
+            console.log(util.inspect(data,false,null));
+        }
     });
-}
-catch (Error e)
-{
-    console.error("An error occured",e);
-}
+
 });
 
 // Listener to be notified when a person joins the channel
