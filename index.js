@@ -59,7 +59,7 @@ client.connect(5, function(data) {
 });
 
 client.addListener('pm', function (nick, text, message) {
-    console.log(nick + text + util.inspect(message,false,null));
+    client.say(nick,"Bot :- Logged and sent to Rohit's Personal Mobile.");
 });
 
 //  if(nick == "Nithiya")
