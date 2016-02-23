@@ -7,7 +7,7 @@ var server = http.createServer();
 server.listen(port);
 
 var config = {
-    userName: 'rohitsakalaBot',
+    userName: 'rohitsakala',
     realName: 'Sakala Venkata Krishna Rohit',
     port: 6667,
     localAddress: null,
@@ -31,7 +31,7 @@ var config = {
 var client = new irc.Client('irc.freenode.net', 'rohitsakala', config);
 
 client.connect(5, function(data) {
-    console.log("Connected" + util.inspect(data, false, null));
+    console.log("Connected  to " + data['server'] );
 });
 
 // Listener to be notified when a person joins the channel
