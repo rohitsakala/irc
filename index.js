@@ -41,7 +41,18 @@ client.connect(5, function(data) {
         }
         else
         {
-            console.log("no" + util.inspect(data,false,null));
+            console.log(util.inspect(data,false,null));
+        }
+    });
+
+    client.join('#osdg-iiith',function(err,data) {
+        if(err)
+        {
+            console.error("An error occured",err);
+        }
+        else
+        {
+            console.log(util.inspect(data,false,null));
         }
     });
 
