@@ -1,5 +1,7 @@
 var http = require('http');
 var irc = require('irc');
+var util = require('util');
+
 var port = process.env.PORT || 5000;
 var server = http.createServer();
 server.listen(port);
@@ -29,7 +31,7 @@ var config = {
 var client = new irc.Client('irc.freenode.net', 'rohitsakala', config);
 
 client.connect(5, function(data) {
-    console.log("Connected" + data);
+    console.log("Connected" + util.inspect(data, false, null));
 });
 
 // Listener to be notified when a person joins the channel
