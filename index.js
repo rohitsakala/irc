@@ -1,6 +1,5 @@
 var http = require('http');
 var irc = require('irc');
-<<<<<<< HEAD
 var util = require('util');
 
 var port = process.env.PORT || 5000;
